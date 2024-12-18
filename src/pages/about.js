@@ -39,7 +39,7 @@ const about = () => {
         <Head>
             <title>Shingo Morita | About Page</title>
             <meta name="description" content="Shingo Morita Portfolio About Page" /> 
-            {/* SSO */}
+            {/* SEO */}
         </Head>
         <main className='flex w-full flex-col items-center justify-center'>
             <Layout className='pt-16'>
