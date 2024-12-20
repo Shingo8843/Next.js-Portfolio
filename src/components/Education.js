@@ -55,7 +55,7 @@ const Education = () => {
             </h2>
         </div>
         <div className='w-[75%] mx-auto relative' ref={ref}>
-            <motion.div className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top' style={{scaleY: scrollYProgress}}/>
+            <motion.div className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light' style={{scaleY: scrollYProgress}}/>
             <ul className='w-full flex flex-col items-start justify-between ml-4'>
                 {experiences.map((experience, index) => (
                     <Details key={index} {...experience}/>

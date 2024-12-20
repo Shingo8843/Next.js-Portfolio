@@ -41,12 +41,12 @@ const about = () => {
             <meta name="description" content="Shingo Morita Portfolio About Page" /> 
             {/* SEO */}
         </Head>
-        <main className='flex w-full flex-col items-center justify-center'>
+        <main className='flex w-full flex-col items-center justify-center dark:text-light'>
             <Layout className='pt-16'>
                 <AnimatedText text="Crafting Intelligent Solutions with AI"/>
                    <div className='grid wfull grid-cols-8 gap-16'>
                         <div className='col-span-3 flex flex-col items-start justify-start'>
-                            <h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>Biography</h2>
+                            <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>Biography</h2>
                             <p className='font-medium'>
                                 I am Shingo Morita, a passionate AI Engineer and Computer Science Master&apos; student at the University of Southern California, 
                                 specializing in deep learning and machine learning applications. 
@@ -70,6 +70,11 @@ const about = () => {
                                 src={profilePic} 
                                 alt="Shingo Morita" 
                                 className="w-full h-auto rounded-2xl" 
+                                priority sizes="
+                                    (max-width: 768px) 100vw,
+                                    (max-width: 1200px) 50vw,
+                                    33vw
+                                    "
                             />
                         </div>
                         <div className='col-span-2 flex flex-col items-end justify-between'>
@@ -77,7 +82,7 @@ const about = () => {
                                 <span className='inline-block text-7xl font-bold'>
                                     <AnimatedNumber value = {10}/>+
                                 </span>
-                                <h2 className='text-xl font-medium capitalize text-dark/75'>
+                                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>
                                     Projects Completed
                                 </h2>
                             </div>
@@ -86,7 +91,7 @@ const about = () => {
                                 <span className='inline-block text-7xl font-bold'>
                                     <AnimatedNumber value = {5}/>+
                                 </span>
-                                <h2 className='text-xl font-medium capitalize text-dark/75'>
+                                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>
                                     Years of Experience in Python
                                 </h2>
                             </div>
@@ -95,7 +100,7 @@ const about = () => {
                                 <span className='inline-block text-7xl font-bold'>
                                     <AnimatedNumber value = {3}/>+
                                 </span>
-                                <h2 className='text-xl font-medium capitalize text-dark/75'>
+                                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>
                                     Years of Experience in JavaScript
                                 </h2>
                             </div>

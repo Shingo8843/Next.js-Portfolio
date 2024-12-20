@@ -10,7 +10,7 @@ const Details = ( {
             <LiIcon reference={ref}/>
             <motion.div initial={{y:50}} whileInView={{y:0}} transition={{duration: 0.5, type: "spring"}} >
                 <h3 className='capitalize text-2xl font-bold'>
-                    {position}&nbsp;<a href={companyLink} target='_blank' rel='noreferrer noopener' className='text-blue-500 capitalize'>@{company}</a>
+                    {position}&nbsp;<a href={companyLink} target='_blank' rel='noreferrer noopener' className='text-primary capitalize dark:text-primaryDark'>@{company}</a>
                 </h3>
                 <span className='capitalize font-meduim text-dark/75'>
                     {time} | {address}
@@ -24,7 +24,7 @@ const Details = ( {
 }
 const experiences = [
     {
-        position: 'AI Engineer',
+        position: 'AI Engineer (Contract)',
         company: 'Reazon Holdings, Inc.',
         companyLink: 'https://www.reazonholdings.com/',
         time: '2024 March - Present',
@@ -32,7 +32,7 @@ const experiences = [
         work: 'Developed AI solutions across advertising, gaming, and healthcare industries. Led projects such as a multimodal medical document RAG system and the Language Cushion Project using LLMs. Conducted experiments on Text-to-SQL systems to optimize data processes, integrating BigQuery on Vertex AI.',
     },
     {
-        position: 'Project Manager',
+        position: 'Project Manager Intern',
         company: 'teamLab Inc.',
         companyLink: 'https://www.teamlab.art/',
         time: 'May 2024',
@@ -74,7 +74,7 @@ const Experience = () => {
             </h2>
         </div>
         <div className='w-[75%] mx-auto relative' ref={ref}>
-            <motion.div className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top' style={{scaleY: scrollYProgress}}/>
+            <motion.div className='absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light' style={{scaleY: scrollYProgress}}/>
             <ul className='w-full flex flex-col items-start justify-between ml-4'>
                 {experiences.map((experience, index) => (
                     <Details key={index} {...experience}/>
