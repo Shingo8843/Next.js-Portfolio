@@ -7,7 +7,6 @@ import { motion } from 'framer-motion'
 import useThemeSwicher from './hooks/useThemeSwicher'
 const CustomLink = ({href, title, className=""}) => {
     const router = useRouter()
-    // console.log(router.pathname)
     return (
         <Link href={href} className={`${className} relative group`}>
             {title}
@@ -24,7 +23,6 @@ const CustomMobileLink = ({href, title, className="", toggle}) => {
         router.push(href)
 
     }
-    // console.log(router.pathname)
     return (
         <button href={href} className={`${className} relative group text-light dark:text-dark my-2`} onClick={handleClick}>
             {title}
@@ -41,7 +39,7 @@ const NavBar = () => {
         setIsOpen(!isOpen)
     }
   return (
-    <header className='w-hull px-32 py-8 font-medium flex justify-between items-center dark:text-light relative'>
+    <header className='w-hull px-32 py-8 font-medium flex justify-between items-center dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8'>
         <button className='hidden lg:flex flex-col justify-center items-center' onClick={handleClick}>
             <span
                 className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 rounded-sm 
